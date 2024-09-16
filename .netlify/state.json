@@ -1,0 +1,20 @@
+{
+	"siteId": "0174560b-a82b-4f76-8ca3-74952a6a8450",
+	"geolocation": {
+		"data": {
+			"city": "Hamilton",
+			"country": {
+				"code": "NZ",
+				"name": "New Zealand"
+			},
+			"subdivision": {
+				"code": "WKO",
+				"name": "Waikato Region"
+			},
+			"timezone": "Pacific/Auckland",
+			"latitude": -37.7837,
+			"longitude": 175.2824
+		},
+		"timestamp": 1726287928501
+	}
+}
