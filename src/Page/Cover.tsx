@@ -1,5 +1,6 @@
 import styles from "./Cover.module.css"
 import { useRef, ChangeEventHandler } from "react"
+import { coverPictureURL } from "../assets/picture"
 
 export const Cover = () => {
 
@@ -16,7 +17,10 @@ export const Cover = () => {
 
     return (
         <div className={styles.cover}>
-            <img src="https://static.vecteezy.com/system/resources/previews/022/737/904/non_2x/modern-city-scape-silhouette-simple-minimalist-blue-city-skyline-background-urban-cityscape-silhouettes-illustration-vector.jpg" alt="Cover" className={styles.image}/>
+            <img 
+            src={coverPictureURL} 
+            alt="Cover" 
+            className={styles.image}/>
             <button className={styles.button} onClick={onChangeCoverImage}>Change cover</button>
             <input onChange={onCoverImageUpload} style={{ display: "none" }} ref={fileInputRef} type="file"/>
         </div>

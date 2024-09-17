@@ -1,0 +1,1 @@
+export const coverPictureURL = 'https://static.vecteezy.com/system/resources/previews/022/737/904/non_2x/modern-city-scape-silhouette-simple-minimalist-blue-city-skyline-background-urban-cityscape-silhouettes-illustration-vector.jpg'
