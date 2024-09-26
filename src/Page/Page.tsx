@@ -2,7 +2,6 @@ import { NodeData } from "../utils/types"
 import { useFocusedNodeIndex } from "./useFocusedNodeIndex"
 import { Cover } from "./Cover"
 import { Spacer } from "./Spacer"
-import { NodeTypeSwitcher } from "../Node/NodeTypeSwitcher"
 import { NodeContainer } from "../Node/NodeContianer"
 import { Title } from "./Title"
 import { nanoid } from "nanoid"
@@ -11,7 +10,7 @@ import { DndContext, DragEndEvent, DragOverlay } from "@dnd-kit/core"
 import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable"
 
 export const Page = () => {
-    const { nodes, addNode, title, setTitle, reorderNodes } = useAppState()
+    const { nodes, addNode, title, setTitle, reorderNodes, cover, setCoverImage } = useAppState()
     const [focusedNodeIndex, setFocusedNodeIndex] = useFocusedNodeIndex({ nodes })
 
     const addNodeAtBottom = () => {
@@ -28,7 +27,7 @@ export const Page = () => {
 
     return (
         <>
-            <Cover />
+            <Cover filePath={cover} changePageCover={setCoverImage} />
             <div>
                 <Title title={title} changePageTitle={setTitle} addNode={addNode} />
                 <DndContext onDragEnd={handleDragEvent}>
@@ -48,10 +47,6 @@ export const Page = () => {
                     </SortableContext>
                     <DragOverlay/>
                 </DndContext>
-
-
-
-
                 <Spacer
                     handleClick={addNodeAtBottom}
                     showHint={!nodes.length} />

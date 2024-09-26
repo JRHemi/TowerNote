@@ -3,8 +3,6 @@ import { useRef, useEffect } from "react";
 import styles from "./TitleStyles.module.css"
 import { nanoid } from "nanoid"
 
-
-
 type TitleProps = {
     title: string;
     changePageTitle(title: string): void;
