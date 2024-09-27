@@ -22,6 +22,7 @@ export const Title = ({ title, changePageTitle, addNode }: TitleProps) => {
     return (
         <div className={styles.container}>
             <h1 className={styles.title}
+                ref={headerRef}
                 contentEditable
                 suppressContentEditableWarning
                 onInput={(event) => changePageTitle(event.currentTarget.textContent || "")}

@@ -6,7 +6,7 @@ type useFocusedNodeIndexProps = {
 }
 
 export const useFocusedNodeIndex = ({nodes}: useFocusedNodeIndexProps): [number, Dispatch<SetStateAction<number>>] => {
-    const [ focusedNodeIndex, setFocusedNodeIndex ] = useState(0)
+    const [ focusedNodeIndex, setFocusedNodeIndex ] = useState(nodes.length)
 
     useEffect(() => {
         const onKeyDown = (event: KeyboardEvent) => {
