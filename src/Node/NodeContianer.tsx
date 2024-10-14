@@ -31,7 +31,7 @@ export const NodeContainer = ({
     return (
         <div style={style} ref={setNodeRef} {...attributes} className={styles.container}>
             <div {...listeners} className={styles.dragHandle}>
-                Handle!
+            🏢
             </div>
             <NodeTypeSwitcher
                 node={node}

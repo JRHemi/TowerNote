@@ -26,19 +26,15 @@ export const BasicNode = ({
     const { changeNodeValue, changeNodeType, addNode, removeNodeByIndex } = useAppState()
 
     useEffect(() => {
-        if (isFocused) {
-            nodeRef.current?.focus()
-        } else {
-            nodeRef.current?.blur()
-        }
-    }, [isFocused])
-
-    useEffect(() => {
-        if (nodeRef.current && !isFocused) {
+        if (nodeRef.current && document.activeElement !== nodeRef.current) {
             nodeRef.current.textContent = node.value;
-        }
-    }, [node]);
-
+          }
+          if (isFocused) {
+            nodeRef.current?.focus();
+          } else {
+            nodeRef.current?.blur();
+          }
+    }, [node, isFocused])
 
     const parseCommand = (nodeType: NodeType) => {
         if (nodeRef.current) {
