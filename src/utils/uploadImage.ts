@@ -6,16 +6,6 @@ export const uploadImage = async (file?: File) => {
             throw new Error("You must select an image to upload");
         }
 
-        await supabase
-            .storage
-            .listBuckets()
-            .then(data => {
-                console.log(data)
-            })
-            .catch(error => {
-                console.log(error)
-            })
-
         const fileExt = file.name.split(".").pop()
         const fileName = `${Math.random()}.${fileExt}`
         const filePath = fileName;

@@ -14,18 +14,18 @@ type AuthSessionProviderProps = {
 }
 
 
-export const AuthSessionProvider = ({children}: AuthSessionProviderProps) => {
-    const [ session, setSession ] = useState<Session | null>(null)
-    const [ loading, setLoading ] = useState(true)
+export const AuthSessionProvider = ({ children }: AuthSessionProviderProps) => {
+    const [session, setSession] = useState<Session | null>(null)
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const auth = async () => {
-            const {data, error} = await supabase.auth.getSession()
-            if(data.session){
+            const { data, error } = await supabase.auth.getSession()
+            if (data.session) {
                 setSession(data.session)
                 setLoading(false)
             } else {
-                console.log(error)
+                console.log("Error loading session", error)
             }
         }
         auth()
@@ -35,8 +35,8 @@ export const AuthSessionProvider = ({children}: AuthSessionProviderProps) => {
         })
     }, [])
 
-    return(
-        <AuthSessionContext.Provider value={{session, loading}}>
+    return (
+        <AuthSessionContext.Provider value={{ session, loading }}>
             {children}
         </AuthSessionContext.Provider>
     )

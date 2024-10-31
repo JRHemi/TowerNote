@@ -16,7 +16,6 @@ export const PageNode = ({ node, isFocused, index }: PageNodeProps) => {
     const navigate = useNavigate();
     const [pageTitle, setPageTitle] = useState("");
     const { removeNodeByIndex } = useAppState();
-    console.log(node);
 
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
@@ -55,6 +54,7 @@ export const PageNode = ({ node, isFocused, index }: PageNodeProps) => {
     const navigateToPage = () => {
         navigate(`/${node.value}`);
     };
+
 
     return (
         <div

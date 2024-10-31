@@ -51,7 +51,6 @@ export const usePageState = (initialState: Page) => {
         setPage((draft) => {draft.cover = imageUrl})
     }
 
-
     const reorderNodes = (id1:string, id2:string) => {
         setPage((draft) => {
             const index1 = draft.nodes.findIndex(node => node.id === id1)

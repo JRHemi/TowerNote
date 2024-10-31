@@ -11,7 +11,7 @@ export const Private = ({component}: PrivateProps) => {
     const { session, loading } = useAuthSession()
 
     if (loading){
-        <>Authenticating...</>
+        return <>Authenticating...</>
     }
 
     return session ? component : <Navigate to="/auth"/>
