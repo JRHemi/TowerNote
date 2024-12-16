@@ -1,9 +1,9 @@
 {
-	"title": "Welcome to ZTM Notes",
+	"title": "Welcome to TowerNote",
 	"nodes": [
 		{
 			"type": "text",
-			"value": "This app is written in React + TypeScript and works similarly to Notion. For example, try entering the text below this paragraph 👇",
+			"value": "This app is written in React + TypeScript and lets you make and organise notes. For example, try entering the text below this paragraph 👇",
 			"id": "dgkm6uWT58KKIvBuo4KCE"
 		},
 		{ "type": "text", "value": "", "id": "cZjPbQHUQmv5h-v1rpDoD" },

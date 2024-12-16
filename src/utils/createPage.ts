@@ -1,5 +1,4 @@
 import { nanoid } from "nanoid";
-import { coverPictureURL } from "../assets/picture";
 import { supabase } from "../supabaseClient";
 
 export const createPage = async () => {
@@ -12,11 +11,11 @@ export const createPage = async () => {
   const slug = nanoid();
 
   const page = {
-    slug,
     id: undefined,
+    slug,
     title: "Untitled",
-    cover: coverPictureURL,
     nodes: [],
+    created_by: user.id,
   };
 
 	await supabase.from("pages").insert(page);

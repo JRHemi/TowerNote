@@ -53,6 +53,4 @@ export const Page = () => {
             </div>
         </>
     )
-
-
 }

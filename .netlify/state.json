@@ -2,19 +2,20 @@
 	"siteId": "0174560b-a82b-4f76-8ca3-74952a6a8450",
 	"geolocation": {
 		"data": {
-			"city": "Hamilton",
+			"city": "London",
 			"country": {
-				"code": "NZ",
-				"name": "New Zealand"
+				"code": "GB",
+				"name": "United Kingdom"
 			},
 			"subdivision": {
-				"code": "WKO",
-				"name": "Waikato Region"
+				"code": "ENG",
+				"name": "England"
 			},
-			"timezone": "Pacific/Auckland",
-			"latitude": -37.7837,
-			"longitude": 175.2824
+			"timezone": "Europe/London",
+			"latitude": 51.5074,
+			"longitude": -0.1196,
+			"postalCode": "EC1N"
 		},
-		"timestamp": 1726287928501
+		"timestamp": 1734318525731
 	}
 }

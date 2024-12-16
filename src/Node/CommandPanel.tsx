@@ -43,7 +43,6 @@ export const CommandPanel = ({ selectItem, nodeText }: CommandPanelProps) => {
 
     }, [selectedItemIndex, selectItem])
 
-
     useEffect(() => {
         const normailizedValue = nodeText.toLowerCase().replace(/\//, "")
         setSelectedItemIndex(
@@ -79,5 +78,4 @@ export const CommandPanel = ({ selectItem, nodeText }: CommandPanelProps) => {
             </ul>
         </div>
     )
-
 }

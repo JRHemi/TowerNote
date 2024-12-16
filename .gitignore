@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+src/Home
 *.local
 
 # Editor directories and files
@@ -27,3 +28,4 @@ dist-ssr
 # Local Netlify folder
 .netlify
 .netlify/state.json
+

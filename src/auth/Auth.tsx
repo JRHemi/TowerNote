@@ -11,13 +11,14 @@ export const Auth = () => {
 
     const handleLogin = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-
         try {
             setLoading(true)
-            const { error } = await supabase.auth.signInWithOtp({ email })
-            if (error) throw error
+            const response = await supabase.auth.signInWithOtp({ email })
+            console.log(response.data)
+            if (response.error) throw response.error
             alert("Check your email for the login link")
         } catch (error) {
+            console.log(error)
             alert(error)
         } finally {
             setLoading(false)

@@ -8,4 +8,3 @@ export const updatePage = debounce(
       },
     500
 );
-

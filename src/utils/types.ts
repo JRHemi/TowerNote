@@ -14,3 +14,9 @@ export type Page = {
     nodes: NodeData[];
     cover: string;
 }
+
+export type PageData = {
+    id: string;
+    slug: string;
+    title: string;
+}

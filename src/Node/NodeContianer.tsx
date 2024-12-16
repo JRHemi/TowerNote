@@ -4,7 +4,6 @@ import { CSS } from "@dnd-kit/utilities"
 import { NodeTypeSwitcher } from "./NodeTypeSwitcher";
 import styles from "./NodeContainer.module.css"
 
-
 type NodeContainerProps = {
     node: NodeData;
     updateFocusedIndex(index: number): void;
@@ -31,7 +30,7 @@ export const NodeContainer = ({
     return (
         <div style={style} ref={setNodeRef} {...attributes} className={styles.container}>
             <div {...listeners} className={styles.dragHandle}>
-            🏢
+                🟦
             </div>
             <NodeTypeSwitcher
                 node={node}

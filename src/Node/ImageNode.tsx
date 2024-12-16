@@ -73,10 +73,9 @@ export const ImageNode = ({ node, isFocused, index }: ImageNodeProps) => {
             <input
                 type="file"
                 style={{ display: "none" }}
-                ref={fileInputRef }
+                ref={fileInputRef}
                 onChange={onImageUpload}
                 />
         </div>
     )
-
 }
